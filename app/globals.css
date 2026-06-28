@@ -1,0 +1,478 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+body {
+    font-family: var(--font-jost), sans-serif, serif;
+    font-size: 15px;
+}
+
+@theme inline {
+
+    /* Typography scale matching your MUI specifications */
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h3: 1.40rem;
+    --font-size-h4: 1.25rem;
+    --font-size-h5: 1.0625rem;
+    --font-size-h6: 1rem;
+    --font-size-body: 15px;
+    --font-size-body1: 14px;
+    --font-size-small: 13px;
+    --font-size-small1: 12px;
+    --font-size-tiny: 10px;
+
+    /* Line heights */
+    --line-height-heading: 1.5;
+    --line-height-body: 1.5;
+
+    /* Font weights */
+    --font-weight-bold: 600;
+    --font-weight-semibold: 500;
+    --font-weight-thinbold: 450;
+    --font-weight-normal: 400;
+
+    --font-heading: var(--font-sans);
+    --font-sans: var(--font-sans);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+
+    /* Custom Color Palette */
+    --color-krishna-50: #9da2a7;
+    --color-krishna-100: #8d9298;
+    --color-krishna-150: #7e8489;
+    --color-krishna-200: #70757b;
+    --color-krishna-250: #61676d;
+    --color-krishna-300: #53595f;
+    --color-krishna-350: #464c51;
+    --color-krishna-400: #393f44;
+    --color-krishna-450: #2c3238;
+    --color-krishna-500: #20262b;
+    --color-krishna-550: #141a20;
+    --color-krishna-600: #040e15;
+    --color-krishna-650: #010f1c;
+
+    /* Portfolio accent palette */
+    --color-pf-violet: #8B5CF6;
+    --color-pf-indigo: #6366F1;
+    --color-pf-cyan: #22D3EE;
+    --color-pf-emerald: #10B981;
+    --color-pf-amber: #F59E0B;
+    --color-pf-rose: #F43F5E;
+    --color-pf-pink: #EC4899;
+
+    @keyframes accordion-down {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: var(--radix-accordion-content-height);
+        }
+    }
+
+    @keyframes accordion-up {
+        from {
+            height: var(--radix-accordion-content-height);
+        }
+        to {
+            height: 0;
+        }
+    }
+
+
+}
+
+:root {
+    --background: oklch(0.984 0.003 248);
+    --foreground: oklch(0.13 0.03 265);
+    --card: oklch(0.97 0.004 265);
+    --card-foreground: oklch(0.13 0.03 265);
+    --popover: oklch(0.99 0.002 265);
+    --popover-foreground: oklch(0.13 0.03 265);
+    --primary: oklch(0.52 0.26 292);
+    --primary-foreground: oklch(0.99 0 0);
+    --secondary: oklch(0.94 0.02 292);
+    --secondary-foreground: oklch(0.52 0.26 292);
+    --muted: oklch(0.96 0.01 265);
+    --muted-foreground: oklch(0.52 0.04 265);
+    --accent: oklch(0.75 0.17 220);
+    --accent-foreground: oklch(0.15 0.05 220);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.87 0.02 265);
+    --input: oklch(0.87 0.02 265);
+    --ring: oklch(0.52 0.26 292);
+    --chart-1: oklch(0.52 0.26 292);
+    --chart-2: oklch(0.58 0.23 264);
+    --chart-3: oklch(0.75 0.17 220);
+    --chart-4: oklch(0.64 0.22 162);
+    --chart-5: oklch(0.72 0.19 60);
+    --radius: 0.75rem;
+    --sidebar: oklch(0.97 0.004 265);
+    --sidebar-foreground: oklch(0.13 0.03 265);
+    --sidebar-primary: oklch(0.52 0.26 292);
+    --sidebar-primary-foreground: oklch(0.99 0 0);
+    --sidebar-accent: oklch(0.94 0.02 292);
+    --sidebar-accent-foreground: oklch(0.52 0.26 292);
+    --sidebar-border: oklch(0.87 0.02 265);
+    --sidebar-ring: oklch(0.52 0.26 292);
+}
+
+.dark {
+    --background: oklch(0.08 0.018 265);
+    --foreground: oklch(0.95 0.005 265);
+    --card: oklch(0.11 0.02 265);
+    --card-foreground: oklch(0.95 0.005 265);
+    --popover: oklch(0.11 0.02 265);
+    --popover-foreground: oklch(0.95 0.005 265);
+    --primary: oklch(0.65 0.26 292);
+    --primary-foreground: oklch(0.08 0.018 265);
+    --secondary: oklch(0.15 0.025 265);
+    --secondary-foreground: oklch(0.95 0.005 265);
+    --muted: oklch(0.15 0.02 265);
+    --muted-foreground: oklch(0.60 0.03 265);
+    --accent: oklch(0.75 0.17 220);
+    --accent-foreground: oklch(0.10 0.03 220);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(0.95 0.005 265 / 0.08);
+    --input: oklch(0.95 0.005 265 / 0.10);
+    --ring: oklch(0.65 0.26 292);
+    --chart-1: oklch(0.65 0.26 292);
+    --chart-2: oklch(0.60 0.23 264);
+    --chart-3: oklch(0.75 0.17 220);
+    --chart-4: oklch(0.64 0.22 162);
+    --chart-5: oklch(0.72 0.19 60);
+    --sidebar: oklch(0.11 0.02 265);
+    --sidebar-foreground: oklch(0.95 0.005 265);
+    --sidebar-primary: oklch(0.65 0.26 292);
+    --sidebar-primary-foreground: oklch(0.95 0.005 265);
+    --sidebar-accent: oklch(0.15 0.025 265);
+    --sidebar-accent-foreground: oklch(0.95 0.005 265);
+    --sidebar-border: oklch(0.95 0.005 265 / 0.08);
+    --sidebar-ring: oklch(0.65 0.26 292);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    html {
+        letter-spacing: 0.025em;
+    }
+
+    /* Direct HTML element styling */
+    h1 {
+        font-size: var(--font-size-h1);
+        line-height: var(--line-height-heading);
+        font-weight: var(--font-weight-bold);
+    }
+
+    h2 {
+        font-size: var(--font-size-h2);
+        line-height: var(--line-height-heading);
+        font-weight: var(--font-weight-bold);
+
+    }
+
+    h3 {
+        font-size: var(--font-size-h3);
+        /*line-height: var(--line-height-heading);*/
+        font-weight: var(--font-weight-bold);
+    }
+
+    h4 {
+        font-size: var(--font-size-h4);
+        line-height: var(--line-height-heading);
+        font-weight: var(--font-weight-semibold);
+
+    }
+
+    h5 {
+        font-size: var(--font-size-h5);
+        line-height: var(--line-height-heading);
+        font-weight: var(--font-weight-semibold);
+    }
+
+    h6 {
+        font-size: var(--font-size-h6);
+        line-height: var(--line-height-heading);
+        font-weight: var(--font-weight-thinbold);
+    }
+
+    p {
+        font-size: var(--font-size-body);
+        line-height: var(--line-height-body);
+    }
+
+
+    small {
+        font-size: var(--font-size-small1);
+        line-height: var(--line-height-body);
+    }
+}
+
+/* Typography utilities using CSS variables */
+@utility text-h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-heading);
+    font-weight: var(--font-weight-bold);
+}
+
+@utility text-h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-heading);
+    font-weight: var(--font-weight-bold);
+}
+
+@utility text-h3 {
+    font-size: var(--font-size-h3);
+    /*line-height: var(--line-height-heading);*/
+    font-weight: var(--font-weight-bold);
+}
+
+@utility text-h4 {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-heading);
+    font-weight: var(--font-weight-semibold);
+}
+
+@utility text-h5 {
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-heading);
+    font-weight: var(--font-weight-semibold);
+}
+
+@utility text-h6 {
+    font-size: var(--font-size-h6);
+    line-height: var(--line-height-heading);
+    font-weight: var(--font-weight-semibold);
+}
+
+@utility text-body {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+}
+
+@utility text-body1 {
+    font-size: var(--font-size-body1);
+    line-height: var(--line-height-body);
+}
+@utility text-subtitle {
+    font-size: 0.928571rem;
+    line-height: var(--line-height-body);
+}
+
+@utility text-small {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-heading);
+}
+@utility text-small1 {
+    font-size: var(--font-size-small1);
+    line-height: var(--line-height-heading);
+}
+
+@utility text-tiny {
+    font-size: var(--font-size-tiny);
+    line-height: var(--line-height-heading);
+}
+/* Custom krishna color utilities */
+@utility bg-krishna-50 {
+    background-color: var(--color-krishna-50);
+}
+
+@utility bg-krishna-100 {
+    background-color: var(--color-krishna-100);
+}
+
+@utility bg-krishna-150 {
+    background-color: var(--color-krishna-150);
+}
+
+@utility bg-krishna-200 {
+    background-color: var(--color-krishna-200);
+}
+
+@utility bg-krishna-250 {
+    background-color: var(--color-krishna-250);
+}
+
+@utility bg-krishna-300 {
+    background-color: var(--color-krishna-300);
+}
+
+@utility bg-krishna-350 {
+    background-color: var(--color-krishna-350);
+}
+
+@utility bg-krishna-400 {
+    background-color: var(--color-krishna-400);
+}
+
+@utility bg-krishna-450 {
+    background-color: var(--color-krishna-450);
+}
+
+@utility bg-krishna-500 {
+    background-color: var(--color-krishna-500);
+}
+
+@utility bg-krishna-550 {
+    background-color: var(--color-krishna-550);
+}
+
+@utility bg-krishna-600 {
+    background-color: var(--color-krishna-600);
+}
+@utility bg-krishna-650 {
+    background-color: var(--color-krishna-650);
+}
+
+@utility text-krishna-50 {
+    color: var(--color-krishna-50);
+}
+
+@utility text-krishna-100 {
+    color: var(--color-krishna-100);
+}
+
+@utility text-krishna-150 {
+    color: var(--color-krishna-150);
+}
+
+@utility text-krishna-200 {
+    color: var(--color-krishna-200);
+}
+
+@utility text-krishna-250 {
+    color: var(--color-krishna-250);
+}
+
+@utility text-krishna-300 {
+    color: var(--color-krishna-300);
+}
+
+@utility text-krishna-350 {
+    color: var(--color-krishna-350);
+}
+
+@utility text-krishna-400 {
+    color: var(--color-krishna-400);
+}
+
+@utility text-krishna-450 {
+    color: var(--color-krishna-450);
+}
+
+@utility text-krishna-500 {
+    color: var(--color-krishna-500);
+}
+
+@utility text-krishna-550 {
+    color: var(--color-krishna-550);
+}
+
+@utility text-krishna-600 {
+    color: var(--color-krishna-600);
+}
+@utility text-krishna-650 {
+    color: var(--color-krishna-650);
+}
+
+@utility border-krishna-50 {
+    border-color: var(--color-krishna-50);
+}
+
+@utility border-krishna-100 {
+    border-color: var(--color-krishna-100);
+}
+
+@utility border-krishna-150 {
+    border-color: var(--color-krishna-150);
+}
+
+@utility border-krishna-200 {
+    border-color: var(--color-krishna-200);
+}
+
+@utility border-krishna-250 {
+    border-color: var(--color-krishna-250);
+}
+
+@utility border-krishna-300 {
+    border-color: var(--color-krishna-300);
+}
+
+@utility border-krishna-350 {
+    border-color: var(--color-krishna-350);
+}
+
+@utility border-krishna-400 {
+    border-color: var(--color-krishna-400);
+}
+
+@utility border-krishna-450 {
+    border-color: var(--color-krishna-450);
+}
+
+@utility border-krishna-500 {
+    border-color: var(--color-krishna-500);
+}
+
+@utility border-krishna-550 {
+    border-color: var(--color-krishna-550);
+}
+
+@utility border-krishna-600 {
+    border-color: var(--color-krishna-600);
+}
+@utility border-krishna-650 {
+    border-color: var(--color-krishna-650);
+}
+
+@utility scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
