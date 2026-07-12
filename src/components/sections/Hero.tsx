@@ -6,7 +6,7 @@ import { Download, ArrowDown, GitBranch, Briefcase } from 'lucide-react';
 const stats = [
   { value: '2+', label: 'Years Experience' },
   { value: '6', label: 'Production Apps' },
-  { value: '9', label: 'Projects Shipped' },
+  { value: '9', label: 'Projects Worked On' },
 ];
 
 function fadeUp(delay: number) {
