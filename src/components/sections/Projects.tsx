@@ -62,7 +62,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-24 px-6 bg-[#F9FAFB] dark:bg-[#07071A]">
+    <section id="projects" className="py-12 px-6 bg-[#F9FAFB] dark:bg-[#07071A]">
       <div className="max-w-6xl mx-auto">
         <SectionTitle
           badge="🗂️ Projects"

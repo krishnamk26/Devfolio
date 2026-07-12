@@ -7,7 +7,7 @@ import SectionTitle from '@/src/components/ui/SectionTitle';
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 bg-[#F1F5F9] dark:bg-[#07071A]">
+    <section id="experience" className="py-12 px-6 bg-[#F1F5F9] dark:bg-[#07071A]">
       <div className="max-w-4xl mx-auto">
         <SectionTitle
           badge="💼 Experience"
@@ -26,7 +26,7 @@ export default function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="relative pl-16 pb-12"
+              className="relative pl-16"
             >
               {/* Timeline dot */}
               <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full border-2 border-violet-300 dark:border-violet-500/40 bg-white dark:bg-[#07071a]">

@@ -6,9 +6,9 @@ import { Mail, GitBranch, ExternalLink, MapPin, Send, CheckCircle2, AlertCircle 
 import SectionTitle from '@/src/components/ui/SectionTitle';
 
 const contactLinks = [
-  { icon: Mail, label: 'Email', value: 'krishna@altimus.co.uk', href: 'mailto:krishna@altimus.co.uk' },
-  { icon: GitBranch, label: 'GitHub', value: 'github.com/krishna', href: 'https://github.com/' },
-  { icon: ExternalLink, label: 'LinkedIn', value: 'linkedin.com/in/krishna', href: '#' },
+  { icon: Mail, label: 'Email', value: 'krishnamk2604@gmail.com', href: 'mailto:krishna2604@gmail.com' },
+  { icon: GitBranch, label: 'GitHub', value: 'github.com/krishnamk26', href: 'https://github.com/krishnamk26' },
+  { icon: ExternalLink, label: 'LinkedIn', value: 'linkedin.com/in/krishnamk26', href: 'https://www.linkedin.com/in/krishnamk26/' },
 ];
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
@@ -47,7 +47,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-[#F1F5F9] dark:bg-[#07071A]">
+    <section id="contact" className="py-12 px-6 bg-[#F1F5F9] dark:bg-[#07071A]">
       <div className="max-w-5xl mx-auto">
         <SectionTitle
           badge="📬 Contact"

@@ -3,9 +3,9 @@
 import { GitBranch, ExternalLink, Mail, Code2 } from 'lucide-react';
 
 const socials = [
-  { icon: GitBranch, href: 'https://github.com/', label: 'GitHub' },
-  { icon: ExternalLink, href: '#', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:krishna@altimus.co.uk', label: 'Email' },
+  { icon: GitBranch, href: 'https://github.com/krishnamk26', label: 'GitHub' },
+  { icon: ExternalLink, href: 'https://www.linkedin.com/in/krishnamk26/', label: 'LinkedIn' },
+  { icon: Mail, href: 'mailto:krishnamk2604@gmail.com', label: 'Email' },
 ];
 
 export default function Footer() {

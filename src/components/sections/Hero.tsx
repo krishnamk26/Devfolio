@@ -91,7 +91,7 @@ export default function Hero() {
             View My Work
           </button>
           <a
-            href="https://github.com/"
+            href="https://github.com/krishnamk26"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-white/20 transition-all duration-200"

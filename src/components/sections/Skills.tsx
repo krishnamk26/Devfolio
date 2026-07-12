@@ -53,11 +53,18 @@ const colorMap: Record<string, {
     badgeText: 'text-amber-700 dark:text-amber-300',
     headerText: 'text-amber-600 dark:text-amber-400',
   },
+  rose: {
+    border: 'border-rose-200 dark:border-rose-500/25 hover:border-rose-400 dark:hover:border-rose-500/50',
+    badgeBg: 'bg-rose-50 dark:bg-rose-500/10',
+    badgeBorder: 'border-rose-200 dark:border-rose-500/20',
+    badgeText: 'text-rose-700 dark:text-rose-300',
+    headerText: 'text-rose-600 dark:text-rose-400',
+  },
 };
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-[#F9FAFB] dark:bg-[#07071A]">
+    <section id="skills" className="py-12 px-6 bg-[#F9FAFB] dark:bg-[#07071A]">
       <div className="max-w-6xl mx-auto">
         <SectionTitle
           badge="🚀 Skills"
@@ -75,7 +82,7 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className={`group rounded-2xl border bg-white dark:bg-white/3 p-6 shadow-sm dark:shadow-none transition-all duration-300 hover:shadow-md dark:hover:shadow-none ${colors.border}`}
+                className={`group rounded-2xl border bg-white dark:bg-white/3 p-6 shadow-sm dark:shadow-none transition-all duration-300 hover:shadow-md dark:hover:shadow-none ${colors.border} ${i === skillGroups.length - 1 ? 'sm:col-span-2 lg:col-span-3' : ''}`}
               >
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-5">

@@ -4,12 +4,11 @@ export const projects: Project[] = [
   {
     name: 'Special Order System',
     tagline: 'Enterprise order management',
-    description:
-      'Full-featured admin panel for managing special customer orders, calendar scheduling, and Konva-powered canvas annotations.',
+    description: "Special Order System — a ground-up rebuild of Altimus's internal operations platform (Next.js 14, MUI v5), replacing a legacy Angular app. I owned the entire front end: custom design system with nine themes and dark mode, plus feature modules for custom orders, returns, invoicing, service bookings, custom Invoice and foot-clinic appointments.",
     tech: ['Next.js 14', 'React 18', 'Redux Toolkit', 'MUI', 'FullCalendar', 'Konva'],
     status: 'Live',
     type: 'professional',
-    url: 'altimus.co.uk',
+    url: 'https://altimusoutdoor.co.uk/',
     color: 'violet',
     gradient: 'from-violet-600 to-purple-700',
   },
@@ -18,7 +17,7 @@ export const projects: Project[] = [
     tagline: 'Seasonal storefront redesign',
     description:
       'Rebuilt the front-end storefront with seasonal homepage variations, dynamic theming, and improved product discovery flows.',
-    tech: ['Next.js 12', 'React 18', 'MUI', 'Tailwind CSS'],
+    tech: ['Next.js 12', 'React', 'MUI'],
     status: 'Live',
     type: 'professional',
     url: 'altimus.co.uk',
@@ -30,10 +29,10 @@ export const projects: Project[] = [
     tagline: 'Luxury branded storefront',
     description:
       'Standalone branded e-commerce experience for Bogner London with custom typography, animations, and premium product presentation.',
-    tech: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion'],
+    tech: ['Next.js', 'React', 'Framer Motion'],
     status: 'Live',
     type: 'professional',
-    url: 'bognerlondon.com',
+    url: 'bogner.london',
     color: 'cyan',
     gradient: 'from-cyan-600 to-teal-700',
   },
@@ -45,7 +44,7 @@ export const projects: Project[] = [
     tech: ['Next.js', 'React', 'Elasticsearch', 'MUI'],
     status: 'In Development',
     type: 'professional',
-    url: 'londonski.co.uk',
+    url: 'dev.londonski.com',
     color: 'emerald',
     gradient: 'from-emerald-600 to-green-700',
   },
@@ -91,6 +90,7 @@ export const projects: Project[] = [
     status: 'Completed',
     type: 'personal',
     color: 'indigo',
+    url:"https://stack-overflow-krish.netlify.app/",
     gradient: 'from-indigo-500 to-blue-600',
   },
   {

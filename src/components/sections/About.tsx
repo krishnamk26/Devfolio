@@ -6,10 +6,10 @@ import SectionTitle from '@/src/components/ui/SectionTitle';
 
 const infoItems = [
   { icon: MapPin, label: 'Location', value: 'Madurai, Tamil Nadu, India' },
-  { icon: Mail, label: 'Email', value: 'krishna@altimus.co.uk', href: 'mailto:krishna@altimus.co.uk' },
-  { icon: Phone, label: 'Phone', value: '+91 — on request' },
-  { icon: GitBranch, label: 'GitHub', value: 'github.com/krishna', href: 'https://github.com/' },
-  { icon: ExternalLink, label: 'LinkedIn', value: 'linkedin.com/in/krishna', href: '#' },
+  { icon: Mail, label: 'Email', value: 'krishnamk2604@gmail.com', href: 'mailto:krishnamk2604@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '+91 9578675765' },
+  { icon: GitBranch, label: 'GitHub', value: 'github.com/krishnamk26', href: 'https://github.com/krishnamk26' },
+  { icon: ExternalLink, label: 'LinkedIn', value: 'linkedin.com/in/krishnamk26', href: 'https://www.linkedin.com/in/krishnamk26/' },
 ];
 
 const education = [
@@ -17,18 +17,29 @@ const education = [
   { degree: 'Higher Secondary', institution: 'Sourashtra Hr. Sec. School, Madurai', year: '2013 – 2015' },
 ];
 
-const certifications = [{ name: 'MERN Full Stack Developer', issuer: 'GUVI' }];
+const certifications = [
+  { name: 'Full Stack Development (FSD)', issuer: 'GUVI' },
+  { name: 'MERN Full Stack Developer', issuer: 'GUVI' },
+  { name: 'React', issuer: 'GUVI' },
+  { name: 'JavaScript', issuer: 'GUVI' },
+  { name: 'Node.js', issuer: 'GUVI' },
+  { name: 'MongoDB', issuer: 'GUVI' },
+  { name: 'MySQL', issuer: 'GUVI' },
+  { name: 'HTML', issuer: 'GUVI' },
+  { name: 'CSS', issuer: 'GUVI' },
+  { name: 'Bootstrap', issuer: 'GUVI' },
+];
 
 const quickFacts = [
   { label: 'Started', value: 'Feb 2024' },
   { label: 'Promoted', value: 'In 2 months' },
   { label: 'Apps Owned', value: '6' },
-  { label: 'Open to', value: 'Remote & On-site' },
+  { label: 'Open to', value: 'On-site, Hybrid, & Remote' },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 bg-[#F1F5F9] dark:bg-[#07071A]">
+    <section id="about" className="py-12 px-6 bg-[#F1F5F9] dark:bg-[#07071A]">
       <div className="max-w-6xl mx-auto">
         <SectionTitle
           badge="🙋 About Me"
@@ -140,18 +151,26 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.25 }}
               className="rounded-2xl border border-slate-200 dark:border-white/8 bg-white dark:bg-white/3 p-6 shadow-sm dark:shadow-none"
             >
-              <h3 className="text-small font-semibold text-slate-500 dark:text-slate-300 uppercase tracking-wider mb-4 flex items-center gap-2">
+              <h3 className="text-small font-semibold text-slate-500 dark:text-slate-300 uppercase tracking-wider mb-1 flex items-center gap-2">
                 <Award className="h-4 w-4 text-amber-500 dark:text-amber-400" />
                 Certifications
               </h3>
-              {certifications.map((cert) => (
-                <div key={cert.name} className="flex items-center justify-between">
-                  <p className="text-small text-slate-800 dark:text-white">{cert.name}</p>
-                  <span className="rounded-full bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20 px-3 py-1 text-tiny text-amber-700 dark:text-amber-400">
-                    {cert.issuer}
+              <p className="text-tiny text-slate-400 dark:text-slate-500 mb-4 flex items-center gap-1.5">
+                Issued by
+                <span className="rounded-full bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20 px-2 py-0.5 text-tiny font-medium text-amber-700 dark:text-amber-400">
+                  GUVI
+                </span>
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {certifications.map((cert) => (
+                  <span
+                    key={cert.name}
+                    className="inline-flex items-center rounded-lg border border-amber-200 dark:border-amber-500/20 bg-amber-50 dark:bg-amber-500/10 px-3 py-1.5 text-tiny font-medium text-amber-700 dark:text-amber-300"
+                  >
+                    {cert.name}
                   </span>
-                </div>
-              ))}
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>
